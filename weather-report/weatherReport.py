@@ -59,15 +59,16 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 
 # Save the plot 
-plt.savefig('weather_chart.png')
+plt.savefig('weather-report/weather_chart.png')
 #plt.show()
 
 #----------------------OS-----------------------------
 
-if not os.path.exists('data'):
-    os.makedirs('data')
+print(os.getcwd())
+if not os.path.exists('weather-report/data'):
+    os.makedirs('weather-report/data')
 
 # Save the CSV file in new directory data
 
-df.to_csv('data/haryana_weather_report_last7Days.csv', index=False)
+df.to_csv('weather-report/data/haryana_weather_report_last7Days.csv', index=False)
 print('Data Saved Successfully')
